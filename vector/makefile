@@ -1,5 +1,5 @@
 CC = gcc
-TARGET = array.c
+TARGET = vector.c
 FLAGS = -g -Wall -Wextra -O0
 NAME = -o array
 
