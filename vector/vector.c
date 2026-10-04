@@ -1,4 +1,4 @@
-#include "array.h"
+#include "vector.h"
 #include <stdlib.h>
 
 void array_init(array_t* arr) {
