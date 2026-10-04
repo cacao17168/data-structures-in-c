@@ -7,6 +7,10 @@ typedef struct {
     size_t size;
 } lifo_t;
 
+void stack_init(lifo_t *lifo);
+
+void stack_free(lifo_t *lifo);
+
 int push(lifo_t *lifo, int data);
 
 int pop(lifo_t *lifo, int *data);

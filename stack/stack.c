@@ -1,6 +1,13 @@
 #include "stack.h"
 #include <stdlib.h>
 
+void stack_init(lifo_t *lifo) {
+    if(!lifo) return;
+
+    lifo->data = NULL;
+    lifo->size = 0;
+}
+
 int push(lifo_t *lifo, int data) {
     if(!lifo) return 1;
 
@@ -45,6 +52,14 @@ int top(lifo_t *lifo, int *data) {
     *data = lifo->data[lifo->size - 1];
 
     return 0;
+}
+
+void stack_free(lifo_t *lifo) {
+    if(!lifo) return;
+
+    free(lifo->data);
+    lifo->size = 0;
+    free(lifo);
 }
 
 int main(void) {
